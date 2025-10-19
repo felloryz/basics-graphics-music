@@ -3,7 +3,7 @@
 module tb;
 
     localparam clk_mhz = 1,
-               w_key   = 4,
+               w_key   = 8,
                w_sw    = 8,
                w_led   = 8,
                w_digit = 8,
@@ -11,10 +11,10 @@ module tb;
 
     //------------------------------------------------------------------------
 
-    logic       clk;
-    logic       rst;
-    logic [3:0] key;
-    logic [7:0] sw;
+    logic               clk;
+    logic               rst;
+    logic [w_key - 1:0] key;
+    logic [w_sw  - 1:0] sw;
 
     //------------------------------------------------------------------------
 
